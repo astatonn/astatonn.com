@@ -73,8 +73,8 @@ export default function Mission() {
   }, []);
 
   return (
-    <div className="flex pt-8 sm:pt-12 md:pt-20 bg-wtsecondary">
-      <section ref={sectionRef} className="container mx-auto min-h-fit px-4">
+    <div id='mission' className="flex pt-8 sm:pt-12 md:pt-20 bg-wtsecondary">
+      <section  ref={sectionRef} className="container mx-auto min-h-fit px-4">
         <div className={`${bebas_neue.className} flex flex-col items-center justify-center`}>
           {textLayout.map((line, lineIndex) => (
             <div

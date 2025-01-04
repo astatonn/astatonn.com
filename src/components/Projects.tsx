@@ -89,11 +89,11 @@ export default function Projects() {
 
     return (
         <div className="flex pt-28 bg-wtsecondary md:px-10 ">
-            <section className="container px-10 md:px-0 mx-auto md:min-h-fit">
+            <section id='projects' className="container px-10 md:px-0 mx-auto md:min-h-fit">
                 <h2 className={`${bebas_neue.className}  text-center min-[620px]:text-left text-7xl md:text-9xl border-b-4  border-indigo-600 pb-8`}>
                     Projects
                 </h2>
-                <div className="text-gray-500">
+                <div id='projects' className="text-gray-500">
                     <div className="flex flex-col md:flex-row gap-4 text-sm text-center font-bold leading-6 pt-4 h-fit">
                         <div className="flex flex-col row-span-3 md:w-3/5">
                             <h4 className='text-2xl text-indigo-600 text-left'>Stacks</h4>

@@ -36,8 +36,8 @@ const LazyImage: React.FC<LazyImageProps> = ({ src, alt, width, height, classNam
     <div
       ref={imgRef}
       style={{
-        minHeight: height || 200,
-        minWidth: width,
+        minHeight: height ,
+        maxWidth: width,
       }}
       className={`${className} transition-opacity duration-500 ${
         hasLoaded ? 'opacity-100' : 'opacity-0'

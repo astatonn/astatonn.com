@@ -5,7 +5,7 @@ const bebas_neue = Bebas_Neue({ subsets: ['latin'], weight: "400" });
 export default function Contact(){
     return (
         <div className="flex bg-wtsecondary ">
-            <section className="flex flex-col items-center w-full justify-center py-28 md:py-52 lg:pt-48 h-fit">
+            <section id='contact' className="flex flex-col items-center w-full justify-center py-28 md:py-52 lg:pt-48 h-fit">
                 <h2 className={`${bebas_neue.className} text-6xl `}>
                     Get in Touch
                 </h2>

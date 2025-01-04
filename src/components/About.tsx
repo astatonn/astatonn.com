@@ -321,13 +321,13 @@ export default function About() {
 
 return (
     <div className="flex md:pt-28 bg-wtsecondary md:px-10 ">
-        <section className="container px-10 md:px-0 mx-auto min-h-[750px]">
+        <section id='about' className="container px-10 md:px-0 mx-auto min-h-[750px]">
             <h2 className={`${bebas_neue.className} text-center min-[620px]:text-left text-7xl md:text-9xl border-b-4  border-indigo-600 pb-8`}>
                 About
             </h2>
 
             <div className="tabs">
-                <div className="flex">
+                <div  className="flex ">
                     <div className="w-full overflow-x-auto md:overflow-visible">
                         <ul className="flex min-w-max  transition-all duration-300 overflow-visible md:overflow-hidden">
                             <li>
