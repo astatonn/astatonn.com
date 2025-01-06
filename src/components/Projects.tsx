@@ -1,7 +1,7 @@
 "use client"
 import { Bebas_Neue } from 'next/font/google';
 import { FaPython, FaPhp, FaLaravel, FaYoutube, FaJs, FaJoomla, FaGitAlt, FaDatabase, FaReact, FaLinkedin } from "react-icons/fa6";
-import { SiAdobeaftereffects, SiAdobeillustrator, SiAdobephotoshop, SiAdobepremierepro } from "react-icons/si";
+import { SiAdobeaftereffects, SiAdobeillustrator, } from "react-icons/si";
 import { TbWorld } from "react-icons/tb";
 import { FaGithubSquare } from "react-icons/fa";
 import { useState } from 'react';

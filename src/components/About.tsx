@@ -1,7 +1,6 @@
 "use client";
 import { Bebas_Neue } from 'next/font/google';
 import React, { useState } from 'react';
-import Image from 'next/image'
 import mePlaying from '../../public/imgs/hero/me_playing.webp'
 import military from '../../public/imgs/hero/fardado.webp'
 import looking from '../../public/imgs/hero/me_looking.webp'
@@ -223,7 +222,7 @@ export default function About() {
                                             <li className='pb-2'>I acted as an instructor twice for recruits (2018 and 2023), where I fulfilled my role as a leader to nearly 300 recruits each year.</li>
                                             <li className='pb-2'>I coordinated, controlled, and managed logistical supplies for 128 cities in Rio Grande do Sul.</li>
                                             <li className='pb-2'>Controlled and managed the active personnel in a company.</li>
-                                            <li>Updated the new user interface of the Army's Zimbra platform, providing a more user-friendly visual experience.</li>
+                                            <li>Updated the new user interface of the Armys Zimbra platform, providing a more user-friendly visual experience.</li>
 
                                         </ul>
                                     </div>
