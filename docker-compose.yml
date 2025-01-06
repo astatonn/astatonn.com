@@ -1,0 +1,24 @@
+services:
+  astatonn-nextjs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: astatonn-nextjs
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=production
+      - HOST=0.0.0.0
+    networks:
+      - laravel-network
+
+networks:
+  laravel-network:
+    external: true
+    
+
+    # networks:
+      # laravel-network:
+        # ipv4_address: 172.18.0.5
+    # volumes:
+      # - /etc/letsencrypt/live/astatonn.com:/etc/certs  # Added SSL certs volume
