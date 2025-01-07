@@ -4,8 +4,8 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: astatonn-nextjs
-    ports:
-      - "3001:3000"
+    expose:
+      - "3001"  # Expondo a porta 3001 apenas na rede Docker
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
@@ -15,7 +15,6 @@ services:
 networks:
   laravel-network:
     external: true
-    
 
     # networks:
       # laravel-network:
