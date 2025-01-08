@@ -6,7 +6,7 @@ import Nav from './Nav';
 
 export default function Hero() {
   return (
-    <div className="md:min-h-screen flex flex-col items-center justify-evenly md:relative md:overflow-hidden h-screen">
+    <div className="md:min-h-screen flex flex-col items-center justify-evenly md:relative md:overflow-hidden h-[650px]">
         <Particles />
       <div className='md:absolute md:top-20'>
         <div className="flex items-center flex-col justify-start">
