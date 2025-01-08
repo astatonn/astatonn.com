@@ -2,13 +2,14 @@ import Image from 'next/image'
 import hero from '../../public/imgs/hero/hero.webp'
 import Particles from '../components/Particle'
 import Nav from './Nav';
+import NavMobile from './NavMobile'
 
 
 export default function Hero() {
   return (
-    <div className="md:min-h-screen flex flex-col items-center justify-evenly md:relative md:overflow-hidden h-[650px]">
+    <div className="md:min-h-screen flex flex-col items-center justify-evenly md:relative md:overflow-hidden h-screen">
         <Particles />
-      <div className='md:absolute md:top-20'>
+      <div className='md:absolute md:top-20 flex md:block flex-col justify-evenly'>
         <div className="flex items-center flex-col justify-start">
           <h1 className="lg:text-7xl tracking-widest text-4xl md:text-5xl font-bold text-foreground">
             LUCAS LIMA
@@ -20,8 +21,11 @@ export default function Hero() {
 
           </div>
         </div>
+        <div className='flex flex-col pt-16 md:hidden'>
+          <NavMobile />
+        </div>
       </div>
-
+      
       <div className="md:absolute lg:w-[42rem] lg:h-[42rem] md:w-[35rem] md:h-[35rem] bg-foreground rounded-full -bottom-60 hidden md:block">
         <Nav />
         <Image src={hero} width={650} height={650} alt="Lucas Lima" className='md:absolute md:z-10 md:-translate-y-60 lg:-translate-y-52 hidden md:block' />
