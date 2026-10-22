@@ -1,9 +1,13 @@
 import About from '@/components/About';
 import Hero from '../components/Hero'
 import Projects from '@/components/Projects';
+import NowBuilding from '@/components/NowBuilding';
 import Mission from '@/components/Mission';
 import Contact from '@/components/Contact';
 import type { Metadata } from 'next'
+
+// "Now Building" reads the progress my project bot publishes; render per request so updates show up live.
+export const dynamic = 'force-dynamic';
 
 export const metadata: Metadata = {
   title: 'Home | Lucas Lima - Astatonn | Developer Portfolio',
@@ -17,6 +21,7 @@ export default function Home() {
       <Hero />
       <About />
       <Projects />
+      <NowBuilding />
       <Mission />
       <Contact />
     </main>

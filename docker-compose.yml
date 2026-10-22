@@ -10,8 +10,14 @@ services:
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
+      - PROGRESS_FILE=/app/data/progress.json
     restart: unless-stopped
     read_only: true
+    volumes:
+      # Progresso dos projetos publicado pelo bot da VPS (vpsmon, projects.public_file) para a seção
+      # "Now Building". A PASTA, só-leitura: o bot troca o arquivo de forma atômica (inode novo) e um
+      # bind mount do arquivo ficaria preso na versão antiga.
+      - /srv/astatonn.com/data:/app/data:ro
     tmpfs:
       - /tmp:noexec,nosuid,size=64m
       # read_only impede o Next de gravar o cache do next/image: sem isto toda imagem é

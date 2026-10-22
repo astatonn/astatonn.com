@@ -34,6 +34,16 @@ export default function NavMobile() {
                         </button>
                         <button className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-indigo-600 z-0 group-hover:h-full "></button>
                     </p>
+
+                    <p className="text-3xl relative w-max">
+                        <button
+                            className="px-1 relative z-10 group-hover:text-wtsecondary cursor-pointer"
+                            onClick={() => handleScroll('building')}
+                        >
+                            Building
+                        </button>
+                        <button className="absolute left-0 bottom-0 w-full h-0.5 transition-all bg-indigo-600 z-0 group-hover:h-full "></button>
+                    </p>
                     
                     <p className="text-3xl relative w-max">
                         <button
