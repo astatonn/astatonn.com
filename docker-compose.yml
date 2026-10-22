@@ -1,23 +1,27 @@
 services:
-  astatonn-nextjs:
+  astatonn-site:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: astatonn-nextjs
+    container_name: astatonn-site
+    user: "node"
     expose:
-      - "3001"  # Expondo a porta 3001 apenas na rede Docker
+      - "3000"
     environment:
       - NODE_ENV=production
       - HOST=0.0.0.0
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:noexec,nosuid,size=64m
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
     networks:
-      - laravel-network
+      - proxy-network
 
 networks:
-  laravel-network:
+  proxy-network:
     external: true
-
-    # networks:
-      # laravel-network:
-        # ipv4_address: 172.18.0.5
-    # volumes:
-      # - /etc/letsencrypt/live/astatonn.com:/etc/certs  # Added SSL certs volume
+    name: proxy-network
