@@ -40,6 +40,10 @@ COPY --from=builder /app/next-env.d.ts ./
 RUN npm prune --omit=dev 2>/dev/null || true \
     && npm install --no-save typescript 2>/dev/null || true
 
+# npm only assembles the image; at runtime it is dead weight with CVEs of its own
+# (bundled tar, glob, brace-expansion). The CMD below calls Next directly.
+RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/bin/npm /usr/local/bin/npx
+
 # Set proper permissions
 RUN chown -R node:node .
 USER node
@@ -49,4 +53,4 @@ ENV NODE_ENV=production
 ENV NEXT_TELEMETRY_DISABLED=1
 ENV PORT=3000
 
-CMD ["npm", "start"]
+CMD ["node", "node_modules/next/dist/bin/next", "start"]

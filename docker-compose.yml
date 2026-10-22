@@ -14,6 +14,9 @@ services:
     read_only: true
     tmpfs:
       - /tmp:noexec,nosuid,size=64m
+      # read_only impede o Next de gravar o cache do next/image: sem isto toda imagem é
+      # reotimizada a cada request (e cada uma loga um unhandledRejection).
+      - /app/.next/cache:noexec,nosuid,uid=1000,gid=1000,size=128m
     security_opt:
       - no-new-privileges:true
     cap_drop:
