@@ -35,10 +35,10 @@ COPY --from=builder /app/node_modules ./node_modules
 COPY --from=builder /app/tsconfig.json ./
 COPY --from=builder /app/next-env.d.ts ./
 
-# Remove devDependencies to eliminate CVEs from eslint/dev tooling
-# Keep typescript as Next.js needs it for next.config.ts at runtime
-RUN npm prune --omit=dev 2>/dev/null || true \
-    && npm install --no-save typescript 2>/dev/null || true
+# Remove devDependencies (eslint, tailwind, @types...) and their CVEs. typescript is a regular
+# dependency because Next compiles next.config.ts at startup. No `|| true` here: the old
+# `npm install --no-save typescript` silently reinstalled every devDependency.
+RUN npm prune --omit=dev --no-audit --no-fund
 
 # npm only assembles the image; at runtime it is dead weight with CVEs of its own
 # (bundled tar, glob, brace-expansion). The CMD below calls Next directly.

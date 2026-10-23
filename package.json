@@ -12,18 +12,19 @@
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@tsparticles/react": "^3.0.0",
     "@tsparticles/slim": "^3.7.1",
-    "express-rate-limit": "^7.5.0",
     "next": "^15.5.28",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "reactflow": "^11.11.4"
+    "reactflow": "^11.11.4",
+    "typescript": "^5.9.3"
   },
   "overrides": {
     "glob": "^10.5.0",
     "minimatch": "^10.2.1",
     "qs": "^6.14.1",
-    "tar": "^7.5.8"
+    "tar": "^7.5.8",
+    "postcss": "$postcss"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -32,8 +33,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.0",
-    "postcss": "^8",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
+    "postcss": "^8.5.31",
+    "tailwindcss": "^3.4.1"
   }
 }
